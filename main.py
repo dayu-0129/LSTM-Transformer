@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error
 import time
 from LSTM import lstm  
 time.sleep(2)
-aapl_df = yf.download("AAPL", start="2010-01-01", end="2024-12-31",group_by='column',auto_adjust=False)
+aapl_df = yf.download("AZN.L", start="2010-01-01", end="2024-12-31",group_by='column',auto_adjust=False)
 aapl_df.columns = ['_'.join(col) if isinstance(col, tuple) else col for col in aapl_df.columns]
 aapl_df = aapl_df.round(2)
 aapl_df.columns = [col.split('_')[0] for col in aapl_df.columns]
